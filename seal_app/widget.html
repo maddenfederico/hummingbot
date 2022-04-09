@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <script src="https://global.transak.com/sdk/v1.1/widget.js" async></script>
+</head>
+
+<body>
+  <script>
+    function launchTransak() {
+      let transak = new TransakSDK.default({
+        apiKey: '4fcd6904-706b-4aff-bd9d-77422813bbb7', // Your API Key
+        environment: 'STAGING', // STAGING/PRODUCTION
+        defaultCryptoCurrency: 'ETH',
+        walletAddress: '', // Your customer wallet address
+        themeColor: '000000', // App theme color in hex
+        fiatCurrency: '', // INR/GBP
+        redirectURL: '',
+        hostURL: window.location.origin,
+        widgetHeight: '550px',
+        widgetWidth: '100%'
+      });
+      transak.init();
+      // To get all the events
+      transak
+        .on(transak.ALL_EVENTS, (data) => {
+          //console.log(data)
+        });
+      // This will trigger when the user marks payment is made.
+      transak.on(transak.EVENTS.TRANSAK_ORDER_SUCCESSFUL, (orderData) => {
+        //console.log(orderData);
+        //transak.close();
+      });
+    }
+    window.onload = function() {
+      launchTransak()
+    }
+  </script>
+</body>
+
+</html>
