@@ -1,0 +1,45 @@
+{
+    "status": {
+        "markets": {
+            "exchange": "binance_PaperTrade",
+            "market": "BTC-USDT",
+            "best_bid": 42519.59,
+            "best_ask": 42519.6,
+            "ref_price(mid_price)": 42519.595
+        },
+        "assets": {
+            "BTC": {
+                "total_balance": 1,
+                "available_balance": 0.999,
+                "current_value(usdt)": 42519.595,
+                "current_percent": 0.977
+            },
+            "USDT": {
+                "total_balance": 1000,
+                "available_balance": 957.5017,
+                "current_value(usdt)": 1000,
+                "current_percent": 0.023
+            }
+        },
+        "orders": [
+            {
+                "level": 1,
+                "type": "sell",
+                "price": 42944.79,
+                "spread": 0.01,
+                "amount(orig)": null,
+                "amount(adj)": 0.001,
+                "age": "00:00:34"
+            },
+            {
+                "level": 1,
+                "type": "buy",
+                "price": 42498.34,
+                "spread": 0.005,
+                "amount(orig)": null,
+                "amount(adj)": 0.001,
+                "age": "00:00:34"
+            }
+        ]
+    }
+}
